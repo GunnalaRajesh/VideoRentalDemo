@@ -3,6 +3,9 @@ package com.crio.springsecuritydemo.model;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
@@ -29,6 +32,7 @@ public class User implements UserDetails {
     private String name;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
     private Role role;
 
 
