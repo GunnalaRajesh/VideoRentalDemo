@@ -8,5 +8,6 @@ import com.crio.springsecuritydemo.model.Video;
 public interface VideoRepository extends MongoRepository<Video, String>{
     Video findByTitle(String title);
     Video findByDirector(String director);
-    Video findByGenre(String title);
+    Video findByGenre(String genre);
+    Video findByID(Long id);
 }
